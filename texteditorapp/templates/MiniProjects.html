@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>The Mini Projects</strong> We Made For You
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Mini Project Name</th>
+        <th scope="col">Devloped By</th>
+        <th scope="col">ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">01</th>
+        <td>Snake Game In Python</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">02</th>
+        <td>Car Race Game In Python</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">03</th>
+        <td>AI Bot In Python</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">03</th>
+        <td>Chat Bot In Python</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">04</th>
+        <td>Face Detection System In Python</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+    </tbody>
+    
+  </table>
+
+  <script>
+    function myFunction() {
+      alert("Download Will Start Soon....");
+    }
+    </script>
+
+{% endblock body %}
+    

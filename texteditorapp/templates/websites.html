@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Websites</strong> We Made For You
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Website Name</th>
+        <th scope="col">Devloped By</th>
+        <th scope="col">ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">01</th>
+        <td>Google</td>
+        <td>Parth Shah</td>
+        <td><a class="btn btn-outline-success" href="https://www.google.com/">Checkout Website</a></td>
+      </tr>
+      <tr>
+        <th scope="row">02</th>
+        <td>Spotify</td>
+        <td>Parth Shah</td>
+        <td><a class="btn btn-outline-success" href="https://www.spotify.com/us/">Checkout Website</a></td>
+      </tr>
+      <tr>
+        <th scope="row">03</th>
+        <td>Instagram</td>
+        <td>Parth Shah</td>
+        <td><a class="btn btn-outline-success" href="https://www.instagram.com/?hl=en">Checkout Website</a></td>
+      </tr>
+      <tr>
+        <th scope="row">04</th>
+        <td>Facebook</td>
+        <td>Parth Shah</td>
+        <td><a class="btn btn-outline-success" href="https://www.facebook.com/">Checkout Website</a></td>
+      </tr>
+    </tbody>
+    
+  </table>
+
+{% endblock body %}

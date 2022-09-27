@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="row">
+  <div class="col">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong> Welcome To The Text Editor!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+      {% endfor %}
+      {% endif %}
+  </div>
+</div>
+
+  <form action='/analyze' method='POST'>
+      {% csrf_token %}
+      <div class="container">
+          <h2><label for="floatingTextarea">Text Editor</label></h2>
+          <textarea class="form-control" name="text" placeholder="Enter Your Text Here..." id="floatingTextarea" style="margin-top: 0px; margin-bottom: 0px; height: 155px;"></textarea>
+          <br>
+          <div class="form-check form-switch">
+              <input class="form-check-input" name="removepunc" type="checkbox" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">Remove Punctuations</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="upcase" type="checkbox" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">Upper Case</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="newlineremover" type="checkbox" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">New Line Remover</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="spaceremover" type="checkbox" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">Space Remover</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="lower" type="checkbox" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">Lower Case</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="saveaudio" type="checkbox" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">Save Audio</label>
+            </div>
+            <div class="form-check form-switch">
+              <input class="form-check-input" name="tts" type="checkbox" id="flexSwitchCheckDisabled">
+              <label class="form-check-label" for="flexSwitchCheckDisabled">Text To Speech</label>
+            </div>
+            <br><br>
+            <button type="submit" class="btn btn-outline-success">Analyze Text</button>
+            &nbsp;&nbsp;
+        </div>
+    </form>
+</div>
+{% endblock body %}

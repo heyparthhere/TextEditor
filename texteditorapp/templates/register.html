@@ -1,0 +1,37 @@
+{% extends 'base1.html' %}
+{% block body %} 
+<div class="row">
+  <div class="col">
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{message}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+      {% endfor %}
+      {% endif %}
+  </div>
+</div>
+<center><h2><i>Register Here</i></h2>
+    <div class="container">
+        <div class="row-cols-6">
+            <div class="col-6">
+                <form method="POST">
+                    {% csrf_token %}
+                    {% for fm in form %}
+                    <div class="form-group">
+                        {{fm}}<br> <small class="text-danger">{{fm.errors|striptags}}</small>
+                    </div>
+                    {% endfor %}
+                    <!-- <center><button type="submit"  class="btn btn-primary">Submit</button></center> -->
+                    <div class="single-input-item">
+                        <button type="submit" class="btn btn-outline-success">Register</button>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <a href="{% url 'login1' %}" class="btn btn-outline-success">Already A User ?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</center>   
+{% endblock body %}

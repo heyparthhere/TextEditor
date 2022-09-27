@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Applications</strong> We Made For You
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Application Name</th>
+        <th scope="col">Devloped By</th>
+        <th scope="col">ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">01</th>
+        <td>Google</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">02</th>
+        <td>Ganna</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">03</th>
+        <td>Spotify</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">04</th>
+        <td>Instagram</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+      <tr>
+        <th scope="row">05</th>
+        <td>Facebook</td>
+        <td>Parth Shah</td>
+        <td><button class="btn btn-outline-success" type="button" onclick="myFunction()">Download</button></td>
+      </tr>
+    </tbody>
+    
+  </table>
+
+  <script>
+    function myFunction() {
+      alert("Download Will Start Soon....");
+    }
+    </script>
+
+{% endblock body %}
